@@ -72,10 +72,8 @@
 
             function change() {
                 if (next == -1) {
-                    console.log(window.pageYOffset);
                     steps.forEach(i => {
                         if(i.offsetTop - (i.clientHeight * 1.5) <= window.pageYOffset) {
-                            console.log(i.offsetTop);
                             next++;
                             images[next].classList.add('visible');
                         }
