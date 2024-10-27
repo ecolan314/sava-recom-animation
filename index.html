@@ -131,11 +131,13 @@
                 if (next == -1) {
                     console.log(window.pageYOffset);
                     steps.forEach(i => {
-                        if(i.offsetTop - (i.clientHeight * 1.5) <= window.pageYOffset) {
-                            console.log(i.offsetTop);
-                            next++;
-                            images[next].classList.add('visible');
-                        }
+                        setTimeout( () => {
+                            if(i.offsetTop - (i.clientHeight * 1.5) <= window.pageYOffset) {
+                                console.log(i.offsetTop);
+                                next++;
+                                images[next].classList.add('visible');
+                            }
+                        }, '100');
                     });
                 } else if (steps[next].offsetTop <= window.innerHeight + window.pageYOffset - (steps[next].clientHeight * 0.5)) {
                     images[next].classList.add('visible');
