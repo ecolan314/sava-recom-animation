@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +7,7 @@
 }
 body {
     position: relative;
+    background: #eee;
 }
 #v2-visual {
     position: sticky;
@@ -13,7 +16,7 @@ body {
     z-index: 2;
 }
 p,h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat';
 }
 #v2-visual .wrapper {
     display: block;
@@ -51,7 +54,7 @@ p,h2 {
 
 .v2-step-header {
     position: sticky;
-    top: 35vh;
+    top: 34vh;
     background: #333;
     padding: 12px;
     width: 100%;
@@ -60,35 +63,57 @@ p,h2 {
 
 .v2-step-header h2{
     text-align: center;
+    font-style: oblique;
+    font-weight: 900;
+    text-transform: uppercase;
     color: #fff;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 .v2-step-text {
     max-width: 800px;
     padding: 48px 0;
+    margin: auto 0;
 }
 
 .v2-step-text p {
     font-size: 20px;
     padding: 8px 16px;
+    line-height: 1.2;
+    letter-spacing: .8;
 }
 
 .v2-step-text span {
     display: block;
-    margin: 16px -16px;
-    padding: 8px 16px;
+    margin: 32px 0px;
+    padding: 16px 64px 16px 16px;
     border-radius: 12px;
     background: rgb(175, 255, 175);
-    color: #000000c0;
+    color: #000000a0;
     position: relative;
+    font-weight: 700;
 }
 .v2-step-text span::before {
     content: "!";
+    display: flex;
+    align-items: center;
     position: absolute;
-    right: 20px;
+    right: 16px;
+    height: 100%;
     bottom: 0;
     font-size: 5rem;
-    color: #fff;
+    color: #000000a0;
     z-index: 0;
+}
+@media (max-width: 600px) {
+    
+    .v2-step-header h2 {
+        font-size: 24px;
+        line-height: .9;
+    }
+
+    .v2-step-text p {
+        font-size: 18px;
+    }
+
 }
