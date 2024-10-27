@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            position: relative;
+        }
+        #v2-visual {
+            position: sticky;
+            top: 0px;
+            background: #000;
+            z-index: 1;
+        }
+        #v2-visual .wrapper {
+            display: block;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 600px;
+            height: 50vh;
+            padding: 24px;
+        }
+        #v2-visual .container {
+            display: flex;
+            height: 100%;
+            position: relative;
+            align-items: center;
+        }
+        .v2-visual-picture {
+            width: 100%;
+            max-height: 100%;
+            position: absolute;
+            right: -120%;
+            transition: right 1s ease-in;
+        }
+        .v2-visual-picture.visible {
+            right: 0px;
+            transition: right 1s ease-out;
+        }
+
+        .v2-article-step {
+            position: relative;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2.v2-visual-name {
+            position: sticky;
+            top: 50vh;
+            background: rgb(187, 187, 255);
+            padding: 12px;
+        }
+        p.v2-visual-text {
+            padding: 12px;
+            margin: auto 0;
+        }
+    </style>
+    <div id="v2-visual">
+        <div class="wrapper">
+            <div class="container">
+                <img src="wall.svg" alt="" class="v2-visual-picture" id="1">
+                <img src="insulation.svg" alt="" class="v2-visual-picture" id="1">
+                <img src="primer.svg" alt="" class="v2-visual-picture" id="2">
+                <img src="grid.svg" alt="" class="v2-visual-picture" id="3">
+                <img src="hats.svg" alt="" class="v2-visual-picture" id="4">
+                <img src="glue.svg" alt="" class="v2-visual-picture" id="5">
+                <img src="bricks.svg" alt="" class="v2-visual-picture" id="6">
+                <img src="grout.svg" alt="" class="v2-visual-picture" id="7">
+                <img src="varnish.svg" alt="" class="v2-visual-picture" id="8">
+            </div>
+        </div>
+    </div>
+    <article>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Стена</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Утеплювач</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Грунтовка</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Сетка</h2>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Шляпки</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Клей</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Кирпичики</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Затирка</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+        </div>
+        <div class="v2-article-step">
+            <h2 class="v2-visual-name">Покрытие лаком</h2>
+            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem atque eveniet assumenda dolore eius cumque iusto suscipit perspiciatis amet laborum! Maxime autem similique harum magnam dignissimos et ab velit veniam?</p>
+        </div>
+    </article>
+
+    <script>
+        let images = document.querySelectorAll('.v2-visual-picture'),
+            steps = document.querySelectorAll('.v2-article-step'),
+            article = document.querySelector('article'),
+            next = -1;
+
+            console.log(steps)
+
+
+            function change() {
+                if (next == -1) {
+                    console.log(window.pageYOffset);
+                    steps.forEach(i => {
+                        if(i.offsetTop - (i.clientHeight * 1.5) <= window.pageYOffset) {
+                            console.log(i.offsetTop);
+                            next++;
+                            images[next].classList.add('visible');
+                        }
+                    });
+                } else if (steps[next].offsetTop <= window.innerHeight + window.pageYOffset - (steps[next].clientHeight * 0.5)) {
+                    images[next].classList.add('visible');
+                    if (next <= (steps.length - 2)) {next++;};
+                } else if(steps[next].offsetTop > window.innerHeight + window.pageYOffset - (steps[next].clientHeight * 1.25)) {
+                    if (next > 0) {
+                        images[next].classList.remove('visible');
+                        next--;
+                        
+                    };
+                }
+            }
+            window.addEventListener('scroll', change);
+            window.addEventListener('resize', change);
+            change();
+    </script>
+    
+</body>
+</html>
+
+
+
