@@ -18,8 +18,11 @@
         #v2-visual {
             position: sticky;
             top: 0px;
-            background: #000;
-            z-index: 1;
+            background: #333;
+            z-index: 2;
+        }
+        p,h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
         #v2-visual .wrapper {
             display: block;
@@ -49,21 +52,56 @@
 
         .v2-article-step {
             position: relative;
-            height: 50vh;
+            min-height: 50vh;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
-        h2.v2-visual-name {
+        .v2-step-header {
             position: sticky;
             top: 50vh;
-            background: rgb(187, 187, 255);
+            background: #333;
             padding: 12px;
+            width: 100%;
+            z-index: 1;
         }
-        p.v2-visual-text {
-            padding: 12px;
-            margin: auto 0;
+
+        .v2-step-header h2{
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
         }
+
+        .v2-step-text {
+            max-width: 800px;
+            padding: 48px 0;
+        }
+
+        .v2-step-text p {
+            font-size: 20px;
+            padding: 8px 16px;
+        }
+
+        .v2-step-text span {
+            display: block;
+            margin: 16px -16px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: rgb(175, 255, 175);
+            color: #000000c0;
+            position: relative;
+        }
+        .v2-step-text span::before {
+            content: "!";
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+            font-size: 5rem;
+            color: #fff;
+            z-index: 0;
+        }
+        
     </style>
     <div id="v2-visual">
         <div class="wrapper">
@@ -82,39 +120,40 @@
     </div>
     <article>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Стена</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Стіна</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Для поклейки плитки підходить будь-яка стіна. Орієнтовна вага бетонної плитки під цеглу 20 кг/кв.м, а фасадного каменю 40 кг/кв.м</p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Утеплювач</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Утеплювач</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Бетонну плитку можна клеїти на утеплювач: мінеральна вата, стіродур, пінополістерол (пінопласт) чи інше. Якщо ваш будинок буде утеплений "мінватою" стіну необхідно поштукатурити.</p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Грунтовка</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Грунтовка</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Ми рекомендуємо використовувати грунтовку глибокого проникнення. <span>Важливо грунтувати поверхню безпосередньо в день або за день перед монтажем плитки. Якщо біля стіни проводились будівельні роботи з сипучими сумішами (пильними) в цих місцях стіни адгезія може погіршитись.</span> </p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Сетка</h2>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Монтажна сітка</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Для того, щоб плитка не відпадала і довго служила, на стіну потрібно набити монтажну сітку. Можна використовувати металеву сітку (товщина від 2мм, комірка 1х1 см), або капронову сітку (щільністю не менше 160 г/кв.м). Ліпше використовувати капронову сітку, оскільки вона не деформується під впливом температури, на відміну від металевої сітки. Важливо! Сітка має бути в основі клею, немов створюючи разом з цеметним клеєм каркас. </p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Шляпки</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Закріплення сітки</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Монтажна сітка кріпиться дюбєлями зі шляпками до опорної стіни. Це гарантує, що плитка разом з клеєм не почне відпадати від стіни якщо, наприклад, будинок дасть усадку, або після морозу.</p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Клей</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Клей</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Рекомендуємо використовувати морозостійкий клей для каменю Ceresit СМ-117 або аналогічний. Витрати клею становлять від 3-5 кг/кв.м залежно від рівності стіни та товщини слою клею. Важливо! Клей має бути відносно свіжий. Паперові мішки з сухою сумішшю мають бути у відмінному стані, без пошкоджень. Якщо мішок десь намок, був порватий - адгезія клею буде жахливою, а плитка після монтажу може почати відпадати.</p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Кирпичики</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Монтаж плитки на стіну</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Перед монтажем, потрібно розкласти з упаковки невелику кількість плитки слідкуючи, щоб по кольорам вона була викладена хаотично. Найкраще, навіть одночасно брати плитку з різних упаковок. Важливо! Найкраще клеїти плитку при температурі 10-25 градусів тепла. Якщо на вулиці жарка суха погода, плитку перед монтажем радимо дещо змочити в воді (окунути у воду), аби плитка після поклейки не витягувала воду з клею, що може погіршити адгезію. Наша плитка є декоративним матеріалом, яка відтворює цегляну кладку. А в деяких колекціях навіть передбачено різний розмір плиток з упаковки. Тому, класти ідеально рівно не обов'язково. Головне, контролюйте, аби плитка була викладена по горизонтальним направлючим. Використувуйте для цього лазерний рівень, або ж використовуйте шнур натягнуть по горизонталі як вказівник. Підрізана плитка кидається в очі, старайтесь за можливості не вставляти шматочки плитку у цегляну кладку, а попередньо викладати плитку, а регулюючи розмір шва (відстань між плитками по горизонтаді) мінімізувати кількість підрізки. Важливо! Якщо плитка замастилась клеєм чи затиркою в процесі монтажу, розчинники використовувати не можна! Дайте забруднику трішки схватитись, і зчистіть зайвий клей/затирку капроновою щіткою. </p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Затирка</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure error beatae facilis sint nesciunt obcaecati ab temporibus delectus reprehenderit amet aliquam quo dolor ipsum sed, rerum quisquam modi enim.</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Затирка</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Затирка може наноситись в 2 способи, залежно від її виду. Звичайна затирка, попередньо замішана у відрі до консистенції сметани, наноситься безпосередньо у шов з будівельного пістолета. Напівсуха затирка (рихлої консистенції, нагадує дещо вологий пісок) вдавлюється в шов спецільною кельмою для розшивки клінкерної плитки (дуже маленький шпательок шириною до 1см). Важливо! Затирку, особливо темних кольорів, потрібно замішувати декілька разів, відповідно до інструкції виробника. Якщо якісно її не замішати,  після висихання на поверхні затирки з'являться білі розводи. Після нанесення, на невелику площу, шов розрівнюється кельмою для розшивки швів, формуючи напівкруглої форми заглибину між плитками. Лишки затирки аккуратно відтираються від плитки капроновою щіткою. Якщо десь все ж лишились білі сліди від затирки, оскільки плитка дещо мажеться, можете розмазати фарбу напилиння на пляму. Також зверніть увагу, що вибір кольору затирки є надзвичайно важливим. Від кольору затирки залежить кольорове сприйняття плитки: якщо затирка темна, хоч в загальному стіна буде здаватись темною, але колір плитки буде здаватись більш тьмяним, не насиченим. І навпаки, якщо затирка світла, то плитка буде на вигляд більш яскравішою, контрастною. Більше рекомендацій щодо видів цегляної кладки, як класти плитку на відкосах чи вікнах, та інше за посиланням.</p></div>
         </div>
         <div class="v2-article-step">
-            <h2 class="v2-visual-name">Покрытие лаком</h2>
-            <p class="v2-visual-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem atque eveniet assumenda dolore eius cumque iusto suscipit perspiciatis amet laborum! Maxime autem similique harum magnam dignissimos et ab velit veniam?</p>
+            <div class="v2-step-header"><h2 class="v2-visual-name">Після монтажна обробка</h2></div>
+            <div class="v2-step-text"><p class="v2-visual-text">Фарбники плитки не вигоряють на сонці. Але можуть з часом вимиватись. Тому, для довготривалого збереження кольору плитку потрібно покрити акриловим лаком (на водній основі) для фасадних робіт, або гідрофобізатором для бетону. Важливо! Покриття наноситься мінімум через тиждень після монтажу, або через 2-3 доби після дощу. В клеї, затирці є вода, яка через плитку має вийти назовні. По рекомендаціям виробників клею, повний цикл висихання клею на цементній основі близько 1 тижня. Якщо плитку покривати одразу після монтажу і не дати воді випаруватись з часом на плитці подекуди можуть з'явитись білі висоли. Якщо дотримуватись цих рекомендацій, гарантія на колір плитки становить 20 років. А оскільки ми займаємось виробництвом плитки вже більше 25 років, клієнти, що купували плитку 20 років тому, і повертаються, щоб обкласти добудовані гаражі,  господарські чи гостьові будиночки, підтверджують, що плитка досі радує око і зберігає колір. </p></div>
         </div>
     </article>
 
