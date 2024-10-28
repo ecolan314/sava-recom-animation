@@ -118,32 +118,30 @@
             article = document.querySelector('article'),
             next = -1;
 
-            console.log(steps);
-            console.log(window.innerHeight);
-
             function change() {
                 if (next == -1) {
                     steps.forEach(i => {
-                        if(i.offsetTop - (i.clientHeight * 1.5) <= window.pageYOffset) {
+                        if(i.offsetTop <= window.pageYOffset) {
                             next++;
                             images[next].classList.add('visible');
                         }
+                        return
                     });
-                } else if (steps[next].offsetTop <= steps[next].clientHeight + window.pageYOffset - (steps[next].clientHeight * 0.5)) {
-                    console.log('1 ', steps[next].offsetTop, ' ', steps[next].clientHeight, ' ', window.pageYOffset, ' ', steps[next].clientHeight * 0.5); 
+                } else if (steps[next].offsetTop < window.pageYOffset) {
+                    // console.log('1 ', steps[next].offsetTop, ' ', steps[next].clientHeight, ' ', window.pageYOffset, ' ', steps[next].clientHeight * 0.5); 
                     images[next].classList.add('visible');
                     if (next <= (steps.length - 2)) {next++;};
                     return
                 } else if(steps[next].offsetTop > steps[next].clientHeight + window.pageYOffset - (steps[next].clientHeight * 2)) {
                     if (next > 0) {
-                        console.log('2 ', steps[next].offsetTop, ' ', steps[next].clientHeight, ' ', window.pageYOffset, ' ', steps[next].clientHeight * 2)
+                        // console.log('2 ', steps[next].offsetTop, ' ', steps[next].clientHeight, ' ', window.pageYOffset, ' ', steps[next].clientHeight * 2);
                         images[next].classList.remove('visible');
-                        next--;
-                        return
-                        
+                        next--;                       
                     };
+                    return
                 }
             }
+
             window.addEventListener('scroll', change);
             window.addEventListener('resize', change);
             change();
