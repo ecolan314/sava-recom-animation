@@ -94,7 +94,7 @@ article::before {
 
 .v2-step-text {
     max-width: 800px;
-    padding: 120px 0;
+    padding: 120px 0 60px;
     margin: auto 0;
 }
 
