@@ -22,7 +22,6 @@ body {
     display: block;
     overflow: hidden;
     margin: 0 auto;
-    max-width: 600px;
     height: 35vh;
     padding: 24px;
 }
@@ -37,11 +36,13 @@ body {
     max-height: 100%;
     position: absolute;
     right: -120%;
-    transition: right 1s ease-in;
+    transition: right 2s ease-out, transform 2s;
+    transform: scale(1.5) translateY(20px);
 }
 .v2-visual-picture.visible {
     right: 0px;
-    transition: right 1s ease-out;
+    transition: right 2s ease-in, transform 2s;
+    transform: scale(1) translateY(0px);
 }
 
 article {
