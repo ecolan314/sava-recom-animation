@@ -5,6 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+*{
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+     user-select: none;
+}
+
 body {
     position: relative;
     background: #eee;
@@ -69,7 +79,7 @@ article::before {
 }
 
 .v2-article-step:not(:last-child)::after {
-    content: '\2193';
+    content: '\2191';
     display: block;
     position: absolute;
     bottom: 10px;
