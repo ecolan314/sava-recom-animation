@@ -135,6 +135,7 @@ article::before {
     color: #000000a0;
     position: relative;
     font-weight: 700;
+    text-align: left;
 }
 .v2-step-text .v2-visual-text span.accent::before {
     content: "!";
