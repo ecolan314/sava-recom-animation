@@ -36,12 +36,12 @@ body {
     max-height: 100%;
     position: absolute;
     right: -120%;
-    transition: right 2s ease-out, transform 2s;
+    transition: right 3s, transform 3s;
     transform: scale(1.5) translateY(20px);
 }
 .v2-visual-picture.visible {
     right: 0px;
-    transition: right 2s ease-in, transform 2s;
+    transition: right 3s, transform 3s;
     transform: scale(1) translateY(0px);
 }
 
@@ -62,13 +62,28 @@ article::before {
 
 .v2-article-step {
     position: relative;
-    min-height: 20vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.v2-article-step:not(:last-child)::after {
+    content: '\2193';
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    color:#00000030;
+    font-size: 48px;
+
+}
+
 .v2-article-step:first-child {
     margin-top: -64px;
+}
+
+.v2-article-step:nth-child(2n) {
+    background:#e5e5e5;
 }
 
 .v2-step-header {
@@ -93,9 +108,13 @@ article::before {
     line-height: 1;
 }
 
+.v2-article-step:nth-child(2n) .v2-step-header h2 {
+    color:#e5e5e5;
+}
+
 .v2-step-text {
     max-width: 800px;
-    padding: 120px 0 60px;
+    padding: 25vh 0 25vh;
     margin: auto 0;
 }
 
@@ -107,7 +126,7 @@ article::before {
     text-align: justify;
 }
 
-.v2-step-text .v2-visual-text span {
+.v2-step-text .v2-visual-text span.accent {
     display: block;
     margin: 32px 0px;
     padding: 16px 64px 16px 16px;
@@ -117,7 +136,7 @@ article::before {
     position: relative;
     font-weight: 700;
 }
-.v2-step-text .v2-visual-text span::before {
+.v2-step-text .v2-visual-text span.accent::before {
     content: "!";
     display: flex;
     align-items: center;
@@ -128,6 +147,15 @@ article::before {
     font-size: 5rem;
     color: #000000a0;
     z-index: 0;
+}
+
+.v2-step-text .v2-visual-text span.accent-addition {
+    display: block;
+    padding: 32px 16px 16px 16px;
+    margin-top: -48px;
+    background: rgba(219, 235, 219, 0.8);
+    border-radius: 0 0 12px 12px;
+    font-size: 1.1rem;
 }
 
 .v2-card-container {
@@ -190,8 +218,17 @@ article::before {
         font-size: 18px;
     }
 
-    .v2-step-text span {
+    .v2-step-text span.important-container {
         text-align: left;
     }
 
+    .v2-visual-picture {
+        transition: right 2s, transform 2s;
+        transform: scale(1.5) translateY(20px);
+    }
+
+    .v2-visual-picture.visible {
+        transition: right 2s, transform 2s;
+        transform: scale(1) translateY(0px);
+    }
 }
