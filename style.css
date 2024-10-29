@@ -214,6 +214,10 @@ article::before {
         line-height: .9;
     }
 
+    .v2-step-text {
+        padding: 20vh 0 20vh;
+    }
+
     .v2-step-text p {
         font-size: 18px;
     }
