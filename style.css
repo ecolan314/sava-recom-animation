@@ -250,4 +250,14 @@ article::before {
         transition: right 2s, transform 2s;
         transform: scale(1) translateY(0px);
     }
+
+    #v2-visual .wrapper {
+        height: 30vh;
+    }
+    .v2-step-header {
+        top: 30vh;
+    }
+    article::before {
+        top: 30vh;
+    }
 }
