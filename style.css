@@ -75,20 +75,22 @@ article {
 
 .v2-article-step {
     position: relative;
-    min-height: 60vh;
+    min-height: 50vh;
+    padding-top: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -20vh;
 }
 
-.v2-article-step:not(:last-child)::after {
+/* .v2-article::before {
     content: '\2191';
     display: block;
     position: absolute;
-    bottom: 10px;
+    top: 78vh;
     color: var(--color-light);
     font-size: 48px;
-}
+} */
 
 .v2-article-step:first-child {
     margin-top: -100vh;
@@ -104,7 +106,7 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 85vh;
+    margin-top: 65vh;
 }
 
 .v2-step-header h2{
@@ -122,7 +124,7 @@ article {
     padding: 10vh 0 10vh;
     margin: auto 0;
     background: var(--color-light);
-    margin-top: 100vh;
+    margin-top: 20vh;
     z-index: 2;
     border-radius: 24px;
 }
@@ -221,16 +223,17 @@ article {
 @media (max-width: 600px) {
     
     .v2-step-header h2 {
-        font-size: 24px;
+        font-size: 32px;
         line-height: .9;
     }
 
     .v2-step-text {
-        padding: 20vh 0 20vh;
+        padding: 5vh 0 5vh;
     }
 
     .v2-step-text p {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 8px 16px;
     }
 
     .v2-step-text span.important-container {
