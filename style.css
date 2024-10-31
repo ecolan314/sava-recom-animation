@@ -9,7 +9,6 @@
     padding: 0;
     box-sizing: border-box;
     --main-color: light-dark(#eee,#212629);
-    --main-color-reverse: light-dark(#212629, #eee);
     --color-dark: #212629;
     --color-light: #eee;
     --color-accent: light-dark(#e4e4e4, #384045);
@@ -122,13 +121,13 @@ article::before {
     font-style: oblique;
     font-weight: 900;
     text-transform: uppercase;
-    color: var(--main-color-reverse);
+    color: var(--color-light);
     font-size: 28px;
     line-height: 1;
 }
 
 .v2-article-step:nth-child(2n) .v2-step-header h2 {
-    color:var(--main-color-reverse);
+    color:var(--color-light-accent);
 }
 
 .v2-step-text {
