@@ -1,17 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;500&display=swap');
 
-:root {
-    color-scheme: light dark;
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --main-color: light-dark(#eee,#212629);
     --color-dark: #212629;
     --color-light: #eee;
-    --color-accent: light-dark(#e4e4e4, #384045);
+    --color-light-accent:#e4e4e4;
 }
 
 *{
@@ -25,7 +20,7 @@
 
 body {
     position: relative;
-    background: var(--main-color);
+    background: #eee;
 }
 #v2-visual {
     position: sticky;
@@ -91,7 +86,7 @@ article::before {
     display: block;
     position: absolute;
     bottom: 10px;
-    color: light-dark(#999, #777);
+    color:#00000030;
     font-size: 48px;
 
 }
@@ -101,7 +96,7 @@ article::before {
 }
 
 .v2-article-step:nth-child(2n) {
-    background:var(--color-accent);
+    background:var(--color-light-accent);
 }
 
 .v2-step-header {
@@ -204,7 +199,6 @@ article::before {
 .v2-card-text {
     font-size: 14px;
     max-width: 180px;
-    color: var(--color-dark);
 }
 
 .v2-card-text>span.accent {
