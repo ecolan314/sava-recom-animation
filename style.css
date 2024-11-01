@@ -78,7 +78,7 @@ article {
 .v2-article-step {
     position: relative;
     min-height: 50vh;
-    padding-top: 20vh;
+    padding: 20vh 8px 0 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,6 +145,7 @@ article {
     z-index: 2;
     border-radius: 24px;
     position: relative;
+    box-shadow:  rgb(255, 68, 174) -.5px 0px, rgb(17, 128, 0) 2px 0;
 }
 
 .v2-step-text p {
@@ -214,7 +215,7 @@ article {
 
 .v2-card-text {
     font-size: 14px;
-    max-width: 180px;
+    max-width: 180px;;
 }
 
 .v2-card-text>span.accent {
