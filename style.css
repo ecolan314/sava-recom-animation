@@ -36,7 +36,7 @@ body {
     overflow: hidden;
     margin: 0 auto 50vh;
     height: 50vh;
-    padding: 10vh 10vh;
+    padding: 10vh 10vw;
 }
 #v2-visual .container {
     display: flex;
@@ -49,12 +49,14 @@ body {
     max-height: 100%;
     position: absolute;
     right: -150%;
-    transition: right 2s, transform 3s;
+    opacity: 0;
+    transition: right 2s, transform 2s, opacity 1s;
     transform: scale(1.5) translateY(20px);
 }
 .v2-visual-picture.visible {
     right: 0px;
-    transition: right 2s, transform 3s;
+    opacity: 1;
+    transition: right 2s, transform 2s, .5s opacity 1s;
     transform: scale(1) translateY(0px);
 }
 
@@ -80,7 +82,7 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: -25vh;
+    margin-bottom: -35vh;
 }
 
 .v2-step-text::after {
@@ -107,7 +109,7 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50vh;
+    margin-top: 60vh;
 }
 
 .v2-step-header span {
@@ -131,6 +133,7 @@ article {
     max-width: 800px;
     font-size: 40px;
     line-height: 1;
+    text-shadow:  rgb(255, 68, 174) -1px 0px, rgb(17, 128, 0) 4px 0;
 }
 
 .v2-step-text {
@@ -256,12 +259,12 @@ article {
     }
 
     .v2-visual-picture {
-        transition: right 2s, transform 2s;
+        transition: right 1.5s, transform 1.5s;
         transform: scale(1.5) translateY(20px);
     }
 
     .v2-visual-picture.visible {
-        transition: right 2s, transform 2s;
+        transition: right 1.5s, transform 1.5s;
         transform: scale(1) translateY(0px);
     }
 }
