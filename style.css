@@ -60,6 +60,16 @@ body {
     transition: right 2s, transform 2s, 1.5s opacity .5s ;
 }
 
+#v2-visual:before {
+    content:"";
+    display: block;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(.8px);
+}
+
 article {
     position: relative;
 }
@@ -186,7 +196,6 @@ article {
     margin-top: -48px;
     background: rgba(175, 255, 175, 0.3);
     border-radius: 0 0 12px 12px;
-    font-size: 1.1rem;
 }
 
 .v2-card-container {
@@ -215,7 +224,7 @@ article {
 
 .v2-card-text {
     font-size: 14px;
-    max-width: 180px;;
+    max-width: 180px;
 }
 
 .v2-card-text>span.accent {
@@ -247,7 +256,7 @@ article {
     }
 
     .v2-step-text {
-        padding: 5vh 0 5vh;
+        padding: 6vh 0 6vh;
     }
 
     .v2-step-text p {
@@ -267,5 +276,38 @@ article {
     .v2-visual-picture.visible {
         transition: right 1.5s, transform 1.5s, 1.5s opacity .5s ;
         transform: scale(1) translateY(0px);
+    }
+}
+
+@media (min-width: 1200px) {
+    #v2-visual {
+        width: 40%;
+        margin-left: auto;
+    }
+    #v2-visual .wrapper {
+        height: 100vh;
+        padding: 5vh 5vw;
+    }
+
+    article {
+        width: 60%;
+        margin-right: auto;
+    }
+
+    .v2-article-step {
+        margin-bottom: -65vh;
+    }
+
+    .v2-article-step:first-child {
+        margin-top: -210vh;
+    }
+
+    .v2-step-header {
+        top: 20vh;
+        margin-top: 80vh;
+    }
+
+    .v2-step-text {
+        margin-top: 30vh;
     }
 }
