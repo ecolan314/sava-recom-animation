@@ -67,7 +67,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    backdrop-filter: blur(.8px);
+    backdrop-filter: blur(.5px);
 }
 
 article {
@@ -196,6 +196,7 @@ article {
     margin-top: -48px;
     background: rgba(175, 255, 175, 0.3);
     border-radius: 0 0 12px 12px;
+    margin-bottom: 16px;
 }
 
 .v2-card-container {
@@ -225,6 +226,7 @@ article {
 .v2-card-text {
     font-size: 14px;
     max-width: 180px;
+    color: #444;
 }
 
 .v2-card-text>span.accent {
@@ -232,6 +234,7 @@ article {
     font-weight: 700;
     display: block;
     margin: 4px 0;
+    color: #000;
 }
 
 .v2-card img {
@@ -244,6 +247,16 @@ article {
     display: block;
     display: none;
     margin-top: 8px;
+}
+
+.v2-step-text figure {
+    padding: 24px;
+}
+
+.v2-step-text figure img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
 }
 
 
