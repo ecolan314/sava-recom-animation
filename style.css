@@ -67,7 +67,6 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    backdrop-filter: blur(.5px);
 }
 
 article {
@@ -99,7 +98,7 @@ article {
     content: '\2191';
     display: block;
     position: absolute;
-    top: -7vh;
+    top: -56px;
     left: 50%;
     margin-left: -12px;
     color: #ffffff30;
@@ -151,7 +150,7 @@ article {
     padding: 10vh 0 10vh;
     margin: auto 0;
     background: var(--color-light);
-    margin-top: 50vh;
+    margin-top: 30vh;
     z-index: 2;
     border-radius: 24px;
     position: relative;
