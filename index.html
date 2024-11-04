@@ -176,12 +176,12 @@
                         }
                         return
                     });
-                } else if (steps[next].offsetTop < window.pageYOffset) {
+                } else if (steps[next].offsetTop - 300 < window.pageYOffset) {
                     // console.log('1 ', steps[next].offsetTop, ' ', steps[next].clientHeight, ' ', window.pageYOffset, ' ', steps[next].clientHeight * 0.5); 
                     images[next].classList.add('visible');
                     if (next <= (steps.length - 2)) {next++;};
                     return
-                } else if(steps[next].offsetTop > steps[next].clientHeight + window.pageYOffset - (steps[next].clientHeight * 2)) {
+                } else if(steps[next].offsetTop - 300 > steps[next].clientHeight + window.pageYOffset - (steps[next].clientHeight * 2)) {
                     if (next > 0) {
                         // console.log('2 ', steps[next].offsetTop, ' ', steps[next].clientHeight, ' ', window.pageYOffset, ' ', steps[next].clientHeight * 2);
                         images[next].classList.remove('visible');
